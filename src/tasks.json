@@ -1,0 +1,74 @@
+[
+    {
+        "titulo": "Comprar alimentos",
+        "descripcion": "Comprar frutas y verduras para la semana",
+        "prioridad": "Media",
+        "estado": "pendiente",
+        "fechaCreacion": "2025-12-04T03:08:08.756Z",
+        "fechaUltimaEdicion": "2025-12-04T03:08:08.756Z",
+        "fechaVencimiento": "2025-12-04T03:08:08.756Z"
+    },
+    {
+        "titulo": "Preparar presentación",
+        "descripcion": "Crear diapositivas para la reunión del lunes",
+        "prioridad": "Baja",
+        "estado": "en progreso",
+        "fechaCreacion": "2025-12-04T03:08:08.756Z",
+        "fechaUltimaEdicion": "2025-12-04T03:08:08.756Z",
+        "fechaVencimiento": "2025-12-04T03:08:08.756Z"
+    },
+    {
+        "titulo": "Hacer ejercicio",
+        "descripcion": "Ir al gimnasio por la tarde",
+        "prioridad": "Alta",
+        "estado": "completada",
+        "fechaCreacion": "2025-12-04T03:08:08.756Z",
+        "fechaUltimaEdicion": "2025-12-04T03:08:08.756Z",
+        "fechaVencimiento": "2025-12-04T03:08:08.756Z"
+    },
+    {
+        "titulo": "Leer un libro",
+        "descripcion": "Terminar de leer 'El Principito'",
+        "prioridad": "Alta",
+        "estado": "cancelada",
+        "fechaCreacion": "2025-12-04T03:08:08.756Z",
+        "fechaUltimaEdicion": "2025-12-04T03:08:08.756Z",
+        "fechaVencimiento": "2025-12-04T03:08:08.756Z"
+    },
+    {
+        "titulo": "Html",
+        "descripcion": "aprendiendo html",
+        "prioridad": "Media",
+        "estado": "pendiente",
+        "fechaCreacion": "2025-12-04T03:08:08.756Z",
+        "fechaUltimaEdicion": "2025-12-04T03:08:08.756Z",
+        "fechaVencimiento": "2025-12-04T03:08:08.756Z"
+    },
+    {
+        "titulo": "PHP",
+        "descripcion": "estudiar",
+        "prioridad": "Media",
+        "estado": "en progreso",
+        "fechaCreacion": "2025-12-04T03:08:44.217Z",
+        "fechaUltimaEdicion": "2025-12-04T03:08:44.217Z",
+        "fechaVencimiento": "2026-04-23T03:00:00.000Z"
+    },
+    {
+        "titulo": "veggito",
+        "descripcion": "estudiar el doble",
+        "prioridad": "Alta",
+        "estado": "completada",
+        "fechaCreacion": "2025-12-04T03:09:56.104Z",
+        "fechaUltimaEdicion": "2025-12-04T03:33:56.171Z",
+        "fechaVencimiento": "2030-12-02T03:00:00.000Z"
+    },
+    {
+        "titulo": "asdasdadasd",
+        "descripcion": "asdasdasdas",
+        "prioridad": "Media",
+        "estado": "completada",
+        "fechaCreacion": "2025-12-04T03:34:57.498Z",
+        "fechaUltimaEdicion": "2025-12-04T03:34:57.498Z",
+        "fechaVencimiento": "2029-06-30T03:00:00.000Z"
+    }
+]
