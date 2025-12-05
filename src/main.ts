@@ -16,6 +16,7 @@ function menuPrincipal(): void {
     console.log('[3] Buscar tarea');
     console.log('[4] Eliminar tarea');
     console.log('[5] Ordenar tareas');
+    console.log('[6] Estadísticas');
     console.log('[0] Salir\n');
     console.log('----------------------------------\n');
     console.log('Ingrese una opción.\n');
@@ -785,6 +786,40 @@ async function main(): Promise<void> {
                     }
 
                     await input('\nPresione "Enter" para continuar...');
+                    console.clear();
+                }
+                break;
+            case 6:
+                // Mostrar estadísticas
+                {
+                    console.clear();
+
+                    const total = miToDoList.getTotalTareas();
+                    const cantPorEstado = miToDoList.getCantidadPorEstado();
+                    const pctPorEstado = miToDoList.getPorcentajePorEstado();
+                    const cantPorDificultad = miToDoList.getCantidadPorDificultad();
+                    const pctPorDificultad = miToDoList.getPorcentajePorDificultad();
+
+                    console.log('-------------------- Estadísticas --------------------');
+                    console.log(`Total de tareas: ${total}\n`);
+
+                    console.log('Cantidad / Porcentaje por Estado:\n');
+                    for (const estado of Object.keys(cantPorEstado)) {
+                        const cantidad = cantPorEstado[estado] ?? 0;
+                        const porcentaje = pctPorEstado[estado] ?? 0;
+                        console.log(`- ${estado}: ${cantidad} (${porcentaje}%)`);
+                    }
+
+                    console.log('\nCantidad / Porcentaje por Dificultad:\n');
+                    const dificultades = Object.keys(cantPorDificultad).map(k => Number(k)).sort((a,b) => a-b);
+                    for (const d of dificultades) {
+                        const cantidad = cantPorDificultad[d] ?? 0;
+                        const porcentaje = pctPorDificultad[d] ?? 0;
+                        console.log(`- Dificultad ${d}: ${cantidad} (${porcentaje}%)`);
+                    }
+
+                    console.log('\n-----------------------------------------------------\n');
+                    await input('Presione "Enter" para continuar...');
                     console.clear();
                 }
                 break;

@@ -66,4 +66,59 @@ export class ToDoList {
             }
         });
     }
+
+    // -------------------- Estadísticas --------------------
+    getTotalTareas(): number {
+        return this.tareas.length;
+    }
+
+    getCantidadPorEstado(): { [estado: string]: number } {
+        const contador: { [estado: string]: number } = {};
+        for (const estado of ESTADO) {
+            contador[estado] = 0;
+        }
+        for (const tarea of this.tareas) {
+            const e = tarea.getEstado();
+            contador[e] = (contador[e] || 0) + 1;
+        }
+        return contador;
+    }
+
+    getPorcentajePorEstado(): { [estado: string]: number } {
+        const total = this.getTotalTareas();
+        const cantidades = this.getCantidadPorEstado();
+        const porcentajes: { [estado: string]: number } = {};
+        if (total === 0) {
+            for (const k of Object.keys(cantidades)) porcentajes[k] = 0;
+            return porcentajes;
+        }
+        for (const k of Object.keys(cantidades)) {
+            porcentajes[k] = parseFloat(((cantidades[k] / total) * 100).toFixed(2));
+        }
+        return porcentajes;
+    }
+
+    getCantidadPorDificultad(): { [dificultad: number]: number } {
+        const contador: { [dificultad: number]: number } = {};
+        for (const tarea of this.tareas) {
+            const d = tarea.getDificultad();
+            contador[d] = (contador[d] || 0) + 1;
+        }
+        return contador;
+    }
+
+    getPorcentajePorDificultad(): { [dificultad: number]: number } {
+        const total = this.getTotalTareas();
+        const cantidades = this.getCantidadPorDificultad();
+        const porcentajes: { [dificultad: number]: number } = {};
+        if (total === 0) {
+            for (const k of Object.keys(cantidades)) porcentajes[Number(k)] = 0;
+            return porcentajes;
+        }
+        for (const k of Object.keys(cantidades)) {
+            const ki = Number(k);
+            porcentajes[ki] = parseFloat(((cantidades[ki] / total) * 100).toFixed(2));
+        }
+        return porcentajes;
+    }
 }
